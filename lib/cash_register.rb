@@ -11,8 +11,9 @@ class CashRegister
   end
   
   def apply_discount
-    paid_percentage = ((100 - @discount).to_f)/100
-    @total = (@total * paid_percentage).to_i
-    "After the discount, the total comes to $#{@total}."
-  end
+    if discount != 0
+      paid_percentage = ((100 - @discount).to_f)/100
+      @total = (@total * paid_percentage).to_i
+      "After the discount, the total comes to $#{@total}."
+    end
 end
