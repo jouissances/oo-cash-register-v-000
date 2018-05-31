@@ -15,5 +15,8 @@ class CashRegister
       paid_percentage = ((100 - @discount).to_f)/100
       @total = (@total * paid_percentage).to_i
       "After the discount, the total comes to $#{@total}."
+    else
+      ""
     end
+  end
 end
